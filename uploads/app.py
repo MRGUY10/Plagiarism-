@@ -16,7 +16,7 @@ app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(__file__), 'uploads')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB max file size
 
 # Enable CORS after the app is created
-CORS(app, origins=["https://plagiarismhecker.vercel.app"])
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 SUPPORTED_LANGUAGES = {
     'py': 'Python',
